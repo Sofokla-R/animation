@@ -1,0 +1,114 @@
+.anim-block1 {
+  width: 500px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #b0a4a4;
+  background-color:#e6f7e6;
+  margin-bottom: 100px;
+}
+
+@keyframes anim-one {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%; 
+  }
+}
+
+.anim-green {
+  height: 100%;
+  background-color: #38e938;
+  animation-name: anim-one;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;  
+  animation-fill-mode: forwards;
+}
+
+
+.anim-block2 {
+  width: 250px;
+  height: 40px;
+  display: block;
+  margin-bottom: 100px;
+  border: 2px solid #bd0360;
+  background-color: #f2087d;  
+  animation-name: anim-two;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;  
+  animation-iteration-count: infinite;
+  animation-play-state: paused; 
+}
+
+@keyframes anim-two {
+  0% {
+    width: 250px; 
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 250px; 
+  }
+} 
+
+.anim-block2:hover {
+  animation-play-state: running;
+}
+
+
+.anim-block3 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #0789c1
+}
+
+.anim-ball {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color:#9907c1;
+  animation-name: anim-three;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+} 
+
+@keyframes anim-three {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  20% {
+    top: calc(100% - 15px);
+  }
+  30% {
+    top: calc(100% - 15px -50px);
+  }
+  40% {
+    top: calc(100% - 15px - 40px);
+  }
+  50% {
+    top: calc(100% - 15px);
+  }
+  60% {
+    top: calc(100% - 15px - 30px);
+  }
+  70% {
+    top: calc(100% - 15px);
+  }
+  80% {
+    top: calc(100% - 15px - 20px);
+  }
+  100% {
+    top: calc(100% - 15px);
+    left: calc(100% - 15px);
+  } 
+}
+
